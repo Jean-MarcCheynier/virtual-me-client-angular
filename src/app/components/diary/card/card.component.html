@@ -1,0 +1,14 @@
+<div class="mb-2 card diary-card">
+    <div class="px-2 card-header">
+        <img src="{{release.node.author.avatarUrl}}" class="rounded float-left mr-2" alt="..." width="30" height="30">
+        <h3 class="mb-0 card-title">
+            <a href="{{release.node.url}}">{{release.node.tagName}} - {{release.node.name}}</a>   
+        </h3>
+    </div>
+    <div class="px-2 card-body"> 
+        <div class="card-text" [innerHtml]="release.node.descriptionHTML"></div>     
+    </div>
+    <div class="mb-0 text-right card-footer">
+        <small>{{ release.node.author.login}} - {{ release.node.publishedAt | date }}</small>
+    </div> 
+</div>

@@ -1,0 +1,34 @@
+<div class="message-container my-1 d-flex" 
+   [ngClass]="{  
+      'bot-message-container flex-row': message.from == 'bot', 
+      'user-message-container flex-row-reverse' : message.from == 'user'
+   }" 
+   [ngSwitch]="message.type">
+   <div class="message text-message p-2" [ngClass]="message.from + '-message'" [ngStyle]="(message.from==='user')?{'background-color':bgColor}:''">
+      <div *ngSwitchCase="'text'">
+         <div  [innerHtml]="message.content"></div>
+      </div>
+      <div *ngSwitchCase="'quickReplies'">
+         <div>{{message.content.title}}</div>
+         <div>
+            <button *ngFor="let btn of message.content.buttons" 
+               class="m-1 btn btn-primary"
+               (click)="postBack(btn.value)">{{ btn.title }}</button>
+         </div>
+      </div>
+      <div *ngSwitchCase="'buttons'">
+         <div>{{message.content.title}}</div>
+         <div class="my-1">
+            <button *ngFor="let btn of message.content.buttons" 
+               class="btn btn-primary btn-block"
+               (click)="postBack(btn.value)">{{ btn.title }}</button>
+         </div>
+      </div>
+      <div *ngSwitchCase="'placeholder'">
+         <div>{{message.content}}</div>
+      </div>
+
+      <div *ngSwitchDefault>...</div>
+   </div>
+   
+</div>

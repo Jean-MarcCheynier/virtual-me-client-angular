@@ -1,0 +1,17 @@
+{
+  "/socket": {
+    "target": "http://localhost:5000",
+    "secure": false,
+    "pathRewrite": {
+      "^/socket": "/socket"
+    }
+  },
+  "/api": {
+    "target": "http://localhost:5000",
+    "secure": false,
+    "pathRewrite": {
+      "^/api": "/api"
+    }
+  }
+  
+}

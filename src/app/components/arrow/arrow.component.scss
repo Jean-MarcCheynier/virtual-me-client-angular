@@ -1,0 +1,67 @@
+@import "~bootstrap-scss/functions";
+@import "src/style/variables.scss";
+
+$arrow-height: 75px;
+$arrow-width: 5px;
+$color: $primary;
+
+
+
+.arrow-down-wrapper {
+    visibility: hidden;
+    color: $color;
+    text-align: center;
+
+    &.animate {
+        visibility: visible;
+        .arrow-down {
+            animation-duration: 1.5s;
+            animation-name: slidein;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+        }
+    }
+
+    .arrow-down {
+        width: $arrow-width;
+        border-radius: 2.5px;
+        background-color: $color;
+        box-shadow: 0.5px -0.5px 1px rgba(8, 11, 204, 0.28) !important;
+    }
+
+    .pointer-wrapper{
+        position: relative;
+        display: inline-block;
+        .branch{
+            border-radius: 2.5px;
+            position: relative;
+            display: inline-block;
+            top: -6px;
+            width: $arrow-width + 1px;
+            background-color: $color;
+            height: 20px;
+        }
+        .left {
+            left: -2px;
+            transform: rotate(-45deg);
+        }
+        .right {
+            left: 2px;
+            transform: rotate(45deg);
+            box-shadow: 0.5px -0.5px 1px rgba(8, 11, 204, 0.28) !important; 
+        }
+    
+    }
+}
+
+
+
+@keyframes slidein {
+from {
+    height: 0px; 
+}
+
+to {
+    height: $arrow-height;
+}
+}

@@ -1,0 +1,70 @@
+<br>
+<br>
+<h2>A propos</h2>
+<!-- first row -->
+<div class="row" [@openClose]="steps.step1.animate ? 'visible' : 'hidden'">
+    <div class="col-md-6"></div>
+    <div class="col-sm-7 col-md-1 order-sm-3 order-md-2 text-sm-left text-center"><fa-icon class="fa-3x text-primary" [icon]="faBabyCarriage"></fa-icon></div>
+    <div class="col-sm-5 col-md-5 order-sm-2 order-md-3 text-sm-right text-center"><strong class="date">1991</strong><span i18n="about-birth | small title">- Naissance</span></div>
+</div>
+<div class="row" [@openClose]="steps.step1.animate ? 'visible' : 'hidden'">
+    <div class="col-md-6 about-desc">Jean-Marc Cheynier nait dans les Hauts de Seines, il y passe son enfance et son adolescence dans la petite ( mais chouette ) commune de 
+        Meudon jusqu'au lycée. Sa curiosité pour les questions Scientifiques le pousse à mettre de côté les matières plus litteraires, ce qu'il regretta par la suite.</div>
+    <div class="col-md-1 mt-2"><app-arrow [animation]="steps.step1" (animationEnded)="onAnimationEnded($event)"></app-arrow></div>
+    <div class="col-md-5"></div>
+</div>
+<!-- second row -->
+<div class="row" [@openClose]="steps.step2.animate ? 'visible' : 'hidden'">
+    <div class="col-md-6"></div>
+    <div class="col-sm-7 col-md-1 order-sm-3 order-md-2 text-sm-left text-center"><fa-icon class="fa-3x text-primary" [icon]="faScroll"></fa-icon></div>
+    <div class="col-sm-5 col-md-5 order-sm-2 order-md-3 text-sm-right text-center">
+        <strong class="date">2009</strong> - Diplôme du Baccalauréat Scientifique
+        <p><a href="https://www.indmeudon.com/">Institut Notre Dame de Meudon</a></p>
+    </div>
+</div>
+<div class="row" [@openClose]="steps.step2.animate ? 'visible' : 'hidden'">
+    <div class="col-md-6 about-desc">Il poursuit ensuite ses études à Paris 14 en classe préparatoire "physique et technologies" au lycée Raspail toujours par curiosité pour les sciences, 
+        mais sans réelle idée de ce qu'il fera après... De toute façon le concours décidera pour lui.</div>
+    <div class="col-md-1 mt-2"><app-arrow [animation]="steps.step2" (animationEnded)="onAnimationEnded($event)"></app-arrow></div>
+    <div class="col-md-5"></div>
+</div>
+<!-- third row -->
+<div class="row" [@openClose]="steps.step3.animate ? 'visible' : 'hidden'">
+    <div class="col-md-6"></div>
+    <div class="col-sm-7 col-md-1 order-sm-3 order-md-2 text-sm-left text-center"><fa-icon class="fa-3x text-primary" [icon]="faDice"></fa-icon></div>
+    <div class="col-sm-5 col-md-5 order-sm-2 order-md-3 text-sm-right text-center">
+        <strong class="date">2011</strong> - Concours CPGE fillière "PT"
+        <p><a href="https://www.ldmraspail.fr/">Licée Raspail</a></p>
+    </div>
+</div>
+<div class="row" [@openClose]="steps.step3.animate ? 'visible' : 'hidden'">
+    <div class="col-md-6 about-desc">Le concours c'est un peu comme un jeu de dés. Jean-Marc n'a pas eu "les Arts". 
+        Il intègre Télécom Nancy, école d'ingénieurs spécialisée dans l'informatique et les sciences du numérique. 
+    </div>
+    <div class="col-md-1 mt-2"><app-arrow [animation]="steps.step3" (animationEnded)="onAnimationEnded($event)"></app-arrow></div>
+    <div class="col-md-5"></div>
+</div>
+<!-- fourth row -->
+<div class="row" [@openClose]="steps.step4.animate ? 'visible' : 'hidden'">
+    <div class="col-md-6"></div>
+    <div class="col-sm-7 col-md-1 order-sm-3 order-md-2 text-sm-left text-center"><fa-icon class="fa-3x text-primary" [icon]="faUserGraduate"></fa-icon></div>
+    <div class="col-sm-5 col-md-5 order-sm-2 order-md-3 text-sm-right text-center">
+        <strong class="date">2014</strong> - Diplôme d'ingénieur en informatique.
+        <p><a href="https://telecomnancy.univ-lorraine.fr/fr/ecole/presentation">Telecom Nancy</a></p>
+    </div>
+</div>
+<div class="row" [@openClose]="steps.step4.animate ? 'visible' : 'hidden'">
+    <div class="col-md-6 about-desc">Après 3 ans en filière "logiciel embarqué" il obtient son diplôme d'Ingénieur </div>
+    <div class="col-md-1 mt-2"><app-arrow [animation]="steps.step4" (animationEnded)="onAnimationEnded($event)"></app-arrow></div>
+    <div class="col-md-5"></div>
+</div>
+<div class="row" [@openClose]="steps.step5.animate ? 'visible' : 'hidden'">
+    <div class="col-md-6"></div>
+    <div class="col-sm-7 col-md-1 order-sm-3 order-md-2 text-sm-left text-center"><fa-icon class="fa-3x text-warning" [icon]="faBuilding"></fa-icon></div>
+    <div class="col-sm-5 col-md-5 order-sm-2 order-md-3 text-sm-right text-center">
+        <strong class="date">Aujourd'hui</strong> - Développeur Fullstack
+    </div>
+</div>
+
+
+

@@ -1,0 +1,27 @@
+<div class="container-fluid" [ngClass]="theme">
+    <div class="row" [ngClass]="{ 'slideIn':slideIn, 'slideOut': !slideIn}">
+        
+        <div *ngIf="displayDiary" id="timeline-cover" class="bg-primary h-100"></div>
+        <div *ngIf="displayDiary" id="timeline" class="pt-5 py-sm-2 overflow-auto position-fixed col-md-6 h-100 scroller">
+            
+            <app-diary></app-diary>
+        </div>
+        <div id="main" class="col">
+            <div *ngIf="displayDiary" class="slide-button-wrapper row position-fixed">
+                <button class="slide-button btn btn-primary rounded-0 border-left-0" 
+                    (click)="toggleSlide()" 
+                    [attr.data-i18n]="(slideIn)?'Journal':'Masquer'"
+                    [attr.data-i18n-en]="(slideIn)?'Diary':'Hide'">
+                </button>
+            </div>
+            <div class="" [ngClass]="{'container' : slideIn }">
+                <div [ngClass]="LAYOUT_CLASS">
+                    <router-outlet></router-outlet>
+                </div>   
+                <app-wrapper [id]="sharedService.id"></app-wrapper>
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,17 @@
+@import "~bootstrap-scss/functions";
+@import "src/style/variables.scss";
+
+.about-desc {
+    &:hover {
+        background-color: $gray-200;
+        box-shadow: 0 1em 2em #eee;
+    }
+}
+
+@media only screen and (max-width:map-get($grid-breakpoints, "md")){
+    .about-desc {
+        padding: 10px 15px;
+        background-color: $primary-light;
+        box-shadow: $box-shadow;
+    }
+}

@@ -1,0 +1,10 @@
+@import "~bootstrap-scss/functions";
+@import "src/style/variables.scss";
+
+#timeline{
+    background-color: $primary-light
+}
+
+.slide-button-wrapper{
+    z-index: 9000;
+}

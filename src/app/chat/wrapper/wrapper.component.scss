@@ -1,0 +1,55 @@
+.send-icon{
+    top: -65px; 
+    right: 10px;
+    cursor: pointer;
+    float: right;
+}
+
+.disabled{
+    display: none;
+}
+
+.chat-live{
+    height: calc(50vh - 50px );
+}
+
+.animate-feather {
+    position: relative;
+    animation-name: animate-feather;
+    animation-duration: 2s;
+    animation-iteration-count:infinite;
+}
+
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+  }
+
+@keyframes animate-feather {
+    0% { 
+        @include transform(rotateZ(0deg));
+        left:0px; 
+        top:0px;
+    }
+    25% {
+        @include transform(rotateZ(-7deg));
+        left:7px; 
+        top:1px;
+    }
+    50% { 
+        @include transform(rotateZ(10deg));
+        left:10px; 
+        top:0px;
+    }
+    75%  { 
+        @include transform(rotateZ(-2deg));
+        left:17px; 
+        top:1px;
+    }
+    100% { 
+        @include transform(rotateZ(7deg));
+        left:21px; 
+        top:0px;
+    }
+}

@@ -1,0 +1,10 @@
+@import "~bootstrap-scss/functions";
+@import "src/style/styles.scss";
+
+.bot-message{
+    background-color: $primary-light;
+}
+.user-message{
+    background-color: lighten($secondary, 25%);
+}
+

@@ -1,0 +1,12 @@
+@import "src/style/styles.scss";
+
+.diary-card{
+    ::ng-deep h4{
+        font-size: 1.25em !important;
+    }
+    ::ng-deep blockquote{
+        padding: 0 1em;
+        color: $secondary;
+        border-left: .25em solid #dfe2e5;
+    }
+}

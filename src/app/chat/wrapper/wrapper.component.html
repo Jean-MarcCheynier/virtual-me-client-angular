@@ -1,0 +1,23 @@
+<div class="chat-wrapper py-3">
+    <div #scrollMe class="chat-live scroller pr-2">
+        
+        <app-message *ngFor="let m of chatService.messageList" 
+            class="chat-message" 
+            [bgColor]="userColor"
+            [message]="m"
+            (postBackEvent)="sendStringMessage($event)">
+        </app-message>
+        <div *ngIf="chatService.isWriting">
+            <fa-icon class="fa text-primary animate-feather" [icon]="faPenNib"></fa-icon>
+        </div>
+
+        <br>
+
+    </div>
+    <div class="chat-typing-zone form-group my-2">
+        <textarea class="form-control pr-4" [(ngModel)]="message.content" (keypress)="keypressedHandler($event)"></textarea>
+        <fa-icon class="send-icon fa-2x text-primary position-relative d-md-none" [ngClass]="{'disabled': !message.content}" (click)="sendMessage(message)" [icon]="faPaperPlane"></fa-icon>
+    </div>
+
+</div>
+ 

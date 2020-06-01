@@ -1,0 +1,44 @@
+@import "~bootstrap-scss/functions";
+@import "variables";
+
+
+
+#timeline-cover{
+    transition: width 0.5s ease;
+}
+
+#timeline{
+    transition: left 0.5s ease;
+}
+
+.slideIn{
+    #timeline{
+        left:-50%;
+    }
+    #timeline-cover{
+        width: 0% !important;
+    }
+}
+
+.slideOut{
+    #timeline{
+        left: 0px;
+    }
+    #timeline-cover{
+        width: 50% !important;
+    }
+}
+
+@include media-breakpoint-down(sm, $grid-breakpoints) {
+    #timeline{
+        z-index: 1000;
+    }
+    #timeline-cover{
+        display: none;
+    }
+    .slideIn{
+        #timeline{
+            left:-100%;
+        }
+    }
+}
