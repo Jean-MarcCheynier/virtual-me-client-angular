@@ -26,7 +26,7 @@
     "@stomp/stompjs": "^5.4.2",
     "install": "^0.13.0",
     "ngx-md": "^8.1.6",
-    "npm": "^6.14.1",
+    "npm": "^9.8.0",
     "rxjs": "~6.4.0",
     "sockjs-client": "^1.4.0",
     "stompjs": "^2.3.3",
@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.803.26",
-    "@angular/cli": "^8.3.25",
+    "@angular/cli": "^16.1.4",
     "@angular/compiler-cli": "~8.2.12",
     "@angular/language-service": "~8.2.12",
     "@types/jasmine": "~3.3.8",
